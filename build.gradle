@@ -10,9 +10,6 @@ group "mn.enumarray"
 repositories {
     mavenCentral()
     jcenter()
-    maven {
-        url "https://dl.bintray.com/micronaut/core-releases-local"
-    }
 }
 
 micronaut {
@@ -25,9 +22,9 @@ micronaut {
 }
 
 dependencies {
-    compileOnly("io.micronaut.data:micronaut-data-processor")
+    annotationProcessor("io.micronaut.data:micronaut-data-processor")
     implementation("io.micronaut:micronaut-validation")
-    implementation("io.micronaut.groovy:micronaut-runtime-groovy")
+    implementation("io.micronaut:micronaut-runtime")
     implementation("io.micronaut:micronaut-http-client")
     implementation("io.micronaut.security:micronaut-security-jwt")
     implementation("io.micronaut.sql:micronaut-jdbc-tomcat")
